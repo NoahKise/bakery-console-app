@@ -4,7 +4,7 @@ namespace Bakery.Models
   {
     public static int CalculateTotal(int breadPrice, int pastryPrice)
     {
-      return 7;
+      return 6;
     }
   }
 }
