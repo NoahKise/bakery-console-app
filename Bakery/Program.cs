@@ -16,6 +16,7 @@ namespace Bakery
     private static Pastry pastryOrder = null;
     static void Main()
     {
+      MultiLineAnimation();
       Console.WriteLine("");
       Console.WriteLine("");
       Console.WriteLine("");
@@ -45,6 +46,92 @@ namespace Bakery
       Console.WriteLine("|                          |");
       Console.WriteLine("|--------------------------|");
       GetBreadInput();
+
+      static void MultiLineAnimation()
+      {
+        var counter = 0;
+        for (int i = 0; i < 30; i++)
+        {
+          Console.Clear();
+          switch (counter % 4)
+          {
+            case 0:
+              {
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("╔════╤╤╤╤════╗");
+                Console.WriteLine("║    │││ \\   ║");
+                Console.WriteLine("║    │││  O  ║");
+                Console.WriteLine("║    OOO     ║");
+                Console.WriteLine("");
+                Console.WriteLine("Loading...");
+                Console.WriteLine("");
+                break;
+              };
+            case 1:
+              {
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("╔════╤╤╤╤════╗");
+                Console.WriteLine("║    ││││    ║");
+                Console.WriteLine("║    ││││    ║");
+                Console.WriteLine("║    OOOO    ║");
+                Console.WriteLine("");
+                Console.WriteLine("Loading...");
+                Console.WriteLine("");
+                break;
+              };
+            case 2:
+              {
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("╔════╤╤╤╤════╗");
+                Console.WriteLine("║   / │││    ║");
+                Console.WriteLine("║  O  │││    ║");
+                Console.WriteLine("║     OOO    ║");
+                Console.WriteLine("");
+                Console.WriteLine("Loading...");
+                Console.WriteLine("");
+                break;
+              };
+            case 3:
+              {
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("╔════╤╤╤╤════╗");
+                Console.WriteLine("║    ││││    ║");
+                Console.WriteLine("║    ││││    ║");
+                Console.WriteLine("║    OOOO    ║");
+                Console.WriteLine("");
+                Console.WriteLine("Loading...");
+                Console.WriteLine("");
+                break;
+              };
+          }
+          counter++;
+          Thread.Sleep(200);
+        }
+      }
 
       static void GetBreadInput()
       {
