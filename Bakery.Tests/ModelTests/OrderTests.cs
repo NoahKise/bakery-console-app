@@ -9,14 +9,16 @@ namespace Bakery.Tests
     [TestMethod]
     public void CalculateTotal_ReturnsAnInt_Int()
     {
-      int breadPrice = Order.CalculateTotal(1, 1);
+      Order newOrder = new Order(5, 2);
+      int breadPrice = newOrder.CalculateTotal();
       Assert.IsInstanceOfType(breadPrice, typeof(int));
     }
     [TestMethod]
     public void PriceBread_Returns7WithInputs5And2_Int()
     {
+      Order newOrder = new Order(5, 2);
       int expectedPrice = 7;
-      int actualPrice = Order.CalculateTotal(5, 2);
+      int actualPrice = newOrder.CalculateTotal();
       Assert.AreEqual(expectedPrice, actualPrice);
     }
 

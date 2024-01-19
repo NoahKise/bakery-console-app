@@ -9,9 +9,9 @@ namespace Bakery.Models
       BreadPrice = breadPrice;
       PastryPrice = pastryPrice;
     }
-    public static int CalculateTotal(int breadPrice, int pastryPrice)
+    public int CalculateTotal()
     {
-      int totalPrice = breadPrice + pastryPrice;
+      int totalPrice = BreadPrice + PastryPrice;
       return totalPrice;
     }
   }
