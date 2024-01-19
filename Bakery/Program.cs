@@ -70,7 +70,9 @@ namespace Bakery
         }
         else
         {
+          Console.ForegroundColor = ConsoleColor.Red;
           Console.WriteLine("Please only enter 'y' or 'n'.");
+          Console.ResetColor();
           NewOrderOrLeave();
         }
       }
@@ -139,7 +141,9 @@ namespace Bakery
         }
         else
         {
+          Console.ForegroundColor = ConsoleColor.Red;
           Console.WriteLine("Please only enter 'y' or 'n'.");
+          Console.ResetColor();
           ConfirmOrEditOrder();
         }
       }
