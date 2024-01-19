@@ -48,6 +48,24 @@ namespace Bakery.Tests
       Assert.AreEqual(typeof(Pastry), newPastry.GetType());
     }
 
+    [TestMethod]
+    public void GetQuantity_ReturnsQuantity_Int()
+    {
+      int expectedQuantity = 5;
+      Pastry newPastry = new Pastry(expectedQuantity);
+      int result = newPastry.Quantity;
+      Assert.AreEqual(expectedQuantity, result);
+    }
+
+    [TestMethod]
+    public void SetQuantity_SetsValueOfQuantity_Void()
+    {
+      Pastry newPastry = new Pastry(5);
+      int newQuantity = 10;
+      newPastry.Quantity = newQuantity;
+      Assert.AreEqual(newQuantity, newPastry.Quantity);
+    }
+
     // // Example Collection Test
     // [TestMethod]
     // public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
