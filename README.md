@@ -20,6 +20,10 @@ This is a console application that lets the user simulate shopping at a bakery. 
 * In your terminal, navigate to the root folder of this project and run `dotnet restore`.
 * Navigate to the "Bakery" directory and run `dotnet run`.
 
+## Known Bugs
+
+* Although there is specific error messaging for entering in numbers above 1000000, if you enter in a massive number such as 1000000000000000 it defaults to a more generic error message.
+
 ## License
 
 Code licensed under [GPL](LICENSE.txt)
