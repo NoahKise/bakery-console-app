@@ -12,5 +12,13 @@ namespace Bakery.Tests
       int breadPrice = Bread.PriceBread(1);
       Assert.IsInstanceOfType(breadPrice, typeof(int));
     }
+
+    [TestMethod]
+    public void PriceBread_Returns10IfInput2_Int()
+    {
+      int expectedPrice = 10;
+      int actualPrice = Bread.PriceBread(2);
+      Assert.AreEqual(expectedPrice, actualPrice);
+    }
   }
 }
