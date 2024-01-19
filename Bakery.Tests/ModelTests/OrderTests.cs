@@ -30,13 +30,19 @@ namespace Bakery.Tests
     [TestMethod]
     public void GetBreadPrice_ReturnsBreadPrice_Int()
     {
-      // Arrange
       int expectedBreadPrice = 5;
       Order newOrder = new Order(expectedBreadPrice, 2);
-      // Act
       int result = newOrder.BreadPrice;
-      // Assert
       Assert.AreEqual(expectedBreadPrice, result);
+    }
+
+    [TestMethod]
+    public void SetBreadPrice_SetsValueOfBreadPrice_Void()
+    {
+      Order newOrder = new Order(5, 2);
+      int newBreadPrice = 10;
+      newOrder.BreadPrice = newBreadPrice;
+      Assert.AreEqual(newBreadPrice, newOrder.BreadPrice);
     }
   }
 }
