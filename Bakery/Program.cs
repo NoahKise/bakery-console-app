@@ -1,5 +1,6 @@
 using System;
 using Bakery.Models;
+using System.Threading;
 
 namespace Bakery
 {
@@ -66,6 +67,13 @@ namespace Bakery
           breadOrder = new Bread(breadQuantity);
           Console.WriteLine("");
           Console.WriteLine("Okie dokie, coming right up!");
+          Thread.Sleep(700);
+          Console.WriteLine("...");
+          Thread.Sleep(700);
+          Console.WriteLine("...");
+          Thread.Sleep(700);
+          Console.WriteLine("...");
+          Thread.Sleep(700);
           GetPastryInput();
         }
       }
@@ -89,6 +97,13 @@ namespace Bakery
           pastryOrder = new Pastry(pastryQuantity);
           Console.WriteLine("");
           Console.WriteLine("You got it!");
+          Thread.Sleep(700);
+          Console.WriteLine("...");
+          Thread.Sleep(700);
+          Console.WriteLine("...");
+          Thread.Sleep(700);
+          Console.WriteLine("...");
+          Thread.Sleep(700);
           ConfirmOrEditOrder();
         }
       }
@@ -145,8 +160,33 @@ namespace Bakery
         Order userOrder = new Order(breadPrice, pastryPrice);
         Console.WriteLine("");
         Console.WriteLine($"Alrighty! {breadOrder.Quantity} baguettes and {pastryOrder.Quantity} croissants comes out to...");
+        Thread.Sleep(700);
+        Console.WriteLine("...");
+        Thread.Sleep(700);
+        Console.WriteLine("Hmm...");
+        Thread.Sleep(700);
+        Console.WriteLine("...");
+        Thread.Sleep(700);
+        Console.WriteLine("...");
+        Thread.Sleep(700);
+        Console.WriteLine("...Let's see...");
+        Thread.Sleep(700);
+        Console.WriteLine("...");
+        Thread.Sleep(700);
+        Console.WriteLine("...");
+        Thread.Sleep(700);
+        Console.WriteLine("...Carry the one...");
+        Thread.Sleep(700);
+        Console.WriteLine("...");
+        Thread.Sleep(700);
+        Console.WriteLine("...");
+        Thread.Sleep(700);
         int orderTotal = userOrder.CalculateTotal();
-        Console.WriteLine($"${orderTotal}!");
+        Console.WriteLine("");
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"${orderTotal}.00!");
+        Console.ResetColor();
+        Console.WriteLine("");
         NewOrderOrLeave();
       }
 
@@ -167,6 +207,15 @@ namespace Bakery
         }
         else
         {
+          Console.WriteLine("");
+          Console.WriteLine("Okie dokie, coming right up!");
+          Thread.Sleep(700);
+          Console.WriteLine("...");
+          Thread.Sleep(700);
+          Console.WriteLine("...");
+          Thread.Sleep(700);
+          Console.WriteLine("...");
+          Thread.Sleep(700);
           breadOrder.Quantity = int.Parse(bread);
           ConfirmPastry();
         }
@@ -189,6 +238,15 @@ namespace Bakery
         }
         else
         {
+          Console.WriteLine("");
+          Console.WriteLine("You got it!");
+          Thread.Sleep(700);
+          Console.WriteLine("...");
+          Thread.Sleep(700);
+          Console.WriteLine("...");
+          Thread.Sleep(700);
+          Console.WriteLine("...");
+          Thread.Sleep(700);
           pastryOrder.Quantity = int.Parse(pastry);
           ConfirmOrEditOrder();
         }
