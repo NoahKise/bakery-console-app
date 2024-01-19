@@ -36,15 +36,15 @@ namespace Bakery
 /_______.' '---'     '---'           /_______.'  '.(_,_).' `--'   `'-'     `'-..-'  ''-'   `'-'    `-..-'        
                                                                                                                  ");
       Console.WriteLine("");
-      Console.WriteLine("|--------------------------|");
-      Console.WriteLine("|  Welcome to Bit Bakery!  |");
-      Console.WriteLine("|--------------------------|");
-      Console.WriteLine("|                          |");
-      Console.WriteLine("|  *Baguette: $5 OR 3/$10  |");
-      Console.WriteLine("|                          |");
-      Console.WriteLine("|  *Croissant: $2 OR 4/$6  |");
-      Console.WriteLine("|                          |");
-      Console.WriteLine("|--------------------------|");
+      Console.WriteLine("  |--------------------------|");
+      Console.WriteLine("  |  Welcome to Bit Bakery!  |");
+      Console.WriteLine("  |--------------------------|");
+      Console.WriteLine("  |                          |");
+      Console.WriteLine("  |  *Baguette: $5 OR 3/$10  |");
+      Console.WriteLine("  |                          |");
+      Console.WriteLine("  |  *Croissant: $2 OR 4/$6  |");
+      Console.WriteLine("  |                          |");
+      Console.WriteLine("  |--------------------------|");
       GetBreadInput();
 
       static void MultiLineAnimation()
@@ -64,12 +64,12 @@ namespace Bakery
                 Console.WriteLine("");
                 Console.WriteLine("");
                 Console.WriteLine("");
-                Console.WriteLine("╔════╤╤╤╤════╗");
-                Console.WriteLine("║    │││ \\   ║");
-                Console.WriteLine("║    │││  O  ║");
-                Console.WriteLine("║    OOO     ║");
+                Console.WriteLine("     ╔════╤╤╤╤════╗");
+                Console.WriteLine("     ║    │││ \\   ║");
+                Console.WriteLine("     ║    │││  O  ║");
+                Console.WriteLine("     ║    OOO     ║");
                 Console.WriteLine("");
-                Console.WriteLine("Loading...");
+                Console.WriteLine("     Loading...");
                 Console.WriteLine("");
                 break;
               };
@@ -82,12 +82,12 @@ namespace Bakery
                 Console.WriteLine("");
                 Console.WriteLine("");
                 Console.WriteLine("");
-                Console.WriteLine("╔════╤╤╤╤════╗");
-                Console.WriteLine("║    ││││    ║");
-                Console.WriteLine("║    ││││    ║");
-                Console.WriteLine("║    OOOO    ║");
+                Console.WriteLine("     ╔════╤╤╤╤════╗");
+                Console.WriteLine("     ║    ││││    ║");
+                Console.WriteLine("     ║    ││││    ║");
+                Console.WriteLine("     ║    OOOO    ║");
                 Console.WriteLine("");
-                Console.WriteLine("Loading...");
+                Console.WriteLine("     Loading...");
                 Console.WriteLine("");
                 break;
               };
@@ -100,12 +100,12 @@ namespace Bakery
                 Console.WriteLine("");
                 Console.WriteLine("");
                 Console.WriteLine("");
-                Console.WriteLine("╔════╤╤╤╤════╗");
-                Console.WriteLine("║   / │││    ║");
-                Console.WriteLine("║  O  │││    ║");
-                Console.WriteLine("║     OOO    ║");
+                Console.WriteLine("     ╔════╤╤╤╤════╗");
+                Console.WriteLine("     ║   / │││    ║");
+                Console.WriteLine("     ║  O  │││    ║");
+                Console.WriteLine("     ║     OOO    ║");
                 Console.WriteLine("");
-                Console.WriteLine("Loading...");
+                Console.WriteLine("         Loading...");
                 Console.WriteLine("");
                 break;
               };
@@ -118,12 +118,12 @@ namespace Bakery
                 Console.WriteLine("");
                 Console.WriteLine("");
                 Console.WriteLine("");
-                Console.WriteLine("╔════╤╤╤╤════╗");
-                Console.WriteLine("║    ││││    ║");
-                Console.WriteLine("║    ││││    ║");
-                Console.WriteLine("║    OOOO    ║");
+                Console.WriteLine("     ╔════╤╤╤╤════╗");
+                Console.WriteLine("     ║    ││││    ║");
+                Console.WriteLine("     ║    ││││    ║");
+                Console.WriteLine("     ║    OOOO    ║");
                 Console.WriteLine("");
-                Console.WriteLine("Loading...");
+                Console.WriteLine("         Loading...");
                 Console.WriteLine("");
                 break;
               };
@@ -239,6 +239,7 @@ namespace Bakery
         if (anotherOrderResponse == "y")
         {
           Console.WriteLine("");
+          MultiLineAnimation();
           Console.WriteLine("Okay!");
           GetBreadInput();
         }
