@@ -65,6 +65,42 @@ namespace Bakery
         Console.WriteLine($"Your total is ${orderTotal}");
       }
 
+      static void ConfirmBread()
+      {
+        Console.WriteLine("Enter new bread amount:");
+        string bread = Console.ReadLine();
+        if (!int.TryParse(bread, out int breadInput) || breadInput < 0)
+        {
+          Console.ForegroundColor = ConsoleColor.Red;
+          Console.WriteLine("Please enter a valid positive intiger");
+          Console.ResetColor();
+          ConfirmBread();
+        }
+        else
+        {
+          breadOrder.Quantity = int.Parse(bread);
+          ConfirmPastry();
+        }
+      }
+
+      static void ConfirmPastry()
+      {
+        Console.WriteLine("Enter new pastry amount:");
+        string pastry = Console.ReadLine();
+        if (!int.TryParse(pastry, out int pastryInput) || pastryInput < 0)
+        {
+          Console.ForegroundColor = ConsoleColor.Red;
+          Console.WriteLine("Please enter a valid positive intiger");
+          Console.ResetColor();
+          ConfirmPastry();
+        }
+        else
+        {
+          pastryOrder.Quantity = int.Parse(pastry);
+          ConfirmOrEditOrder();
+        }
+      }
+
       static void ConfirmOrEditOrder()
       {
         Order userOrder = new Order(breadPrice, pastryPrice);
@@ -74,13 +110,7 @@ namespace Bakery
         if (confirmResponse == "y")
         {
           Console.WriteLine("Let's fix your order then!");
-          Console.WriteLine("Enter bread amount:");
-          string bread = Console.ReadLine();
-          Console.WriteLine("Enter pastry amount:");
-          string pastry = Console.ReadLine();
-          breadOrder.Quantity = int.Parse(bread);
-          pastryOrder.Quantity = int.Parse(pastry);
-          ConfirmOrEditOrder();
+          ConfirmBread();
         }
         else if (confirmResponse == "n")
         {
