@@ -19,5 +19,12 @@ namespace Bakery.Tests
       int actualPrice = Order.CalculateTotal(5, 2);
       Assert.AreEqual(expectedPrice, actualPrice);
     }
+
+    [TestMethod]
+    public void OrderConstructor_CreatesInstanceOfOrder_Order()
+    {
+      Order newOrder = new Order();
+      Assert.AreEqual(typeof(Order), newOrder.GetType());
+    }
   }
 }
