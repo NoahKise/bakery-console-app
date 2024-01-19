@@ -239,9 +239,7 @@ namespace Bakery
         if (anotherOrderResponse == "y")
         {
           Console.WriteLine("");
-          MultiLineAnimation();
-          Console.WriteLine("Okay!");
-          GetBreadInput();
+          Main();
         }
         else if (anotherOrderResponse == "n")
         {
