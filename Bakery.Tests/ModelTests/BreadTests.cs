@@ -28,5 +28,12 @@ namespace Bakery.Tests
       int actualPrice = Bread.PriceBread(3);
       Assert.AreEqual(expectedPrice, actualPrice);
     }
+    [TestMethod]
+    public void PriceBread_Returns15IfInput4_Int()
+    {
+      int expectedPrice = 15;
+      int actualPrice = Bread.PriceBread(4);
+      Assert.AreEqual(expectedPrice, actualPrice);
+    }
   }
 }
