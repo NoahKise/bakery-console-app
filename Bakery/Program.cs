@@ -55,6 +55,26 @@ namespace Bakery
         }
       }
 
+      static void NewOrderOrLeave()
+      {
+        Console.WriteLine($"Thank you for shopping with us.  Would you like to place another order? (y/n)");
+        string anotherOrderResponse = Console.ReadLine().ToLower();
+        if (anotherOrderResponse == "y")
+        {
+          Console.WriteLine("What else can we get for ya?");
+          GetBreadInput();
+        }
+        else if (anotherOrderResponse == "n")
+        {
+          Console.WriteLine("Ok then, thank you come again!");
+        }
+        else
+        {
+          Console.WriteLine("Please only enter 'y' or 'n'.");
+          NewOrderOrLeave();
+        }
+      }
+
       static void CheckOut()
       {
         breadPrice = breadOrder.PriceBread();
@@ -63,6 +83,7 @@ namespace Bakery
         Console.WriteLine($"You have ordered {breadOrder.Quantity} loaves of bread and {pastryOrder.Quantity} pastries.");
         int orderTotal = userOrder.CalculateTotal();
         Console.WriteLine($"Your total is ${orderTotal}");
+        NewOrderOrLeave();
       }
 
       static void ConfirmBread()
