@@ -2,6 +2,9 @@ namespace Bakery.Models
 {
   public class Bread
   {
-    // properties, constructors, methods, etc. go here
+    public static int PriceBread(int inputNumber)
+    {
+      return 5;
+    }
   }
 }

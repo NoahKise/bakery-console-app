@@ -1,18 +1,16 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Bakery.Models;
-using System;
-
-// Setup for tests that need code to run beteween each test
 
 namespace Bakery.Tests
 {
   [TestClass]
-  public class BreadTests : IDisposable
+  public class BreadTests
   {
-    public void Dispose()
+    [TestMethod]
+    public void PriceBread_ReturnsAnInt_Int()
     {
-      // Code inside this method is run between each test.
+      int breadPrice = Bread.PriceBread(1);
+      Assert.IsInstanceOfType(breadPrice, typeof(int));
     }
-    // Test methods go here
   }
 }
