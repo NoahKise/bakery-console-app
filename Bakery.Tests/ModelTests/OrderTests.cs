@@ -44,5 +44,23 @@ namespace Bakery.Tests
       newOrder.BreadPrice = newBreadPrice;
       Assert.AreEqual(newBreadPrice, newOrder.BreadPrice);
     }
+
+    [TestMethod]
+    public void GetPastryPrice_ReturnsPastryPrice_Int()
+    {
+      int expectedPastryPrice = 2;
+      Order newOrder = new Order(5, expectedPastryPrice);
+      int result = newOrder.PastryPrice;
+      Assert.AreEqual(expectedPastryPrice, result);
+    }
+
+    [TestMethod]
+    public void SetPastryPrice_SetsValueOfPastryPrice_Void()
+    {
+      Order newOrder = new Order(5, 2);
+      int newPastryPrice = 4;
+      newOrder.PastryPrice = newPastryPrice;
+      Assert.AreEqual(newPastryPrice, newOrder.PastryPrice);
+    }
   }
 }
