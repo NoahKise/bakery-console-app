@@ -47,5 +47,23 @@ namespace Bakery.Tests
       Bread newBread = new Bread(2);
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
+
+    [TestMethod]
+    public void GetQuantity_ReturnsQuantity_Int()
+    {
+      int expectedQuantity = 5;
+      Bread newBread = new Bread(expectedQuantity);
+      int result = newBread.Quantity;
+      Assert.AreEqual(expectedQuantity, result);
+    }
+
+    [TestMethod]
+    public void SetQuantity_SetsValueOfQuantity_Void()
+    {
+      Bread newBread = new Bread(5);
+      int newQuantity = 10;
+      newBread.Quantity = newQuantity;
+      Assert.AreEqual(newQuantity, newBread.Quantity);
+    }
   }
 }
