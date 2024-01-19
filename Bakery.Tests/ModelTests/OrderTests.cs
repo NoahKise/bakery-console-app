@@ -23,8 +23,20 @@ namespace Bakery.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new Order();
+      Order newOrder = new Order(5, 2);
       Assert.AreEqual(typeof(Order), newOrder.GetType());
+    }
+
+    [TestMethod]
+    public void GetBreadPrice_ReturnsBreadPrice_Int()
+    {
+      // Arrange
+      int expectedBreadPrice = 5;
+      Order newOrder = new Order(expectedBreadPrice, 2);
+      // Act
+      int result = newOrder.BreadPrice;
+      // Assert
+      Assert.AreEqual(expectedBreadPrice, result);
     }
   }
 }
