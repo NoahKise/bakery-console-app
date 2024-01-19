@@ -52,11 +52,29 @@ namespace Bakery
         Console.WriteLine("How many Baguettes would you like?");
         Console.WriteLine("");
         string breadInputString = Console.ReadLine();
-        if (!int.TryParse(breadInputString, out int breadInput) || breadInput < 0)
+        if (!int.TryParse(breadInputString, out int breadInput))
         {
           Console.ForegroundColor = ConsoleColor.Red;
           Console.WriteLine("");
           Console.WriteLine("Sorry, I don't understand...");
+          Console.WriteLine("(Please enter a valid positive intiger)");
+          Console.ResetColor();
+          GetBreadInput();
+        }
+        else if (!int.TryParse(breadInputString, out int breadInputNumber) || breadInputNumber > 1000000)
+        {
+          Console.ForegroundColor = ConsoleColor.Red;
+          Console.WriteLine("");
+          Console.WriteLine("Oh man, this is embarassing, I only made one million this morning...");
+          Console.WriteLine("(Please enter a valid positive intiger below 1000001)");
+          Console.ResetColor();
+          GetBreadInput();
+        }
+        else if (!int.TryParse(breadInputString, out int breadInputNum) || breadInputNum < 0)
+        {
+          Console.ForegroundColor = ConsoleColor.Red;
+          Console.WriteLine("");
+          Console.WriteLine("I can't exactly sell you a negative amount...");
           Console.WriteLine("(Please enter a valid positive intiger)");
           Console.ResetColor();
           GetBreadInput();
@@ -82,11 +100,29 @@ namespace Bakery
         Console.WriteLine("And how about some croissants? How many would you like?");
         Console.WriteLine("");
         string pastryInputString = Console.ReadLine();
-        if (!int.TryParse(pastryInputString, out int pastryInput) || pastryInput < 0)
+        if (!int.TryParse(pastryInputString, out int pastryInput))
         {
           Console.ForegroundColor = ConsoleColor.Red;
           Console.WriteLine("");
           Console.WriteLine("Sorry, I don't understand...");
+          Console.WriteLine("(Please enter a valid positive intiger)");
+          Console.ResetColor();
+          GetPastryInput();
+        }
+        else if (!int.TryParse(pastryInputString, out int pastryInputNumber) || pastryInputNumber > 1000000)
+        {
+          Console.ForegroundColor = ConsoleColor.Red;
+          Console.WriteLine("");
+          Console.WriteLine("Oh man, this is embarassing, I only made one million this morning...");
+          Console.WriteLine("(Please enter a valid positive intiger below 1000001)");
+          Console.ResetColor();
+          GetPastryInput();
+        }
+        else if (!int.TryParse(pastryInputString, out int pastryInputNum) || pastryInputNum < 0)
+        {
+          Console.ForegroundColor = ConsoleColor.Red;
+          Console.WriteLine("");
+          Console.WriteLine("I can't exactly sell you a negative amount...");
           Console.WriteLine("(Please enter a valid positive intiger)");
           Console.ResetColor();
           GetPastryInput();
@@ -184,7 +220,7 @@ namespace Bakery
         int orderTotal = userOrder.CalculateTotal();
         Console.WriteLine("");
         Console.ForegroundColor = ConsoleColor.Green;
-        Console.WriteLine($"${orderTotal}.00!");
+        Console.WriteLine($"${orderTotal}.00 !");
         Console.ResetColor();
         Console.WriteLine("");
         NewOrderOrLeave();
@@ -196,7 +232,7 @@ namespace Bakery
         Console.WriteLine("How many baguettes are we doin today?");
         Console.WriteLine("");
         string bread = Console.ReadLine();
-        if (!int.TryParse(bread, out int breadInput) || breadInput < 0)
+        if (!int.TryParse(bread, out int breadInput))
         {
           Console.ForegroundColor = ConsoleColor.Red;
           Console.WriteLine("");
@@ -205,8 +241,28 @@ namespace Bakery
           Console.ResetColor();
           ConfirmBread();
         }
+        else if (!int.TryParse(bread, out int breadInputNumber) || breadInputNumber > 1000000)
+        {
+          Console.ForegroundColor = ConsoleColor.Red;
+          Console.WriteLine("");
+          Console.WriteLine("Oh man, this is embarassing, I only made one million this morning...");
+          Console.WriteLine("(Please enter a valid positive intiger below 1000001)");
+          Console.ResetColor();
+          ConfirmBread();
+        }
+        else if (!int.TryParse(bread, out int breadInputNum) || breadInputNum < 0)
+        {
+          Console.ForegroundColor = ConsoleColor.Red;
+          Console.WriteLine("");
+          Console.WriteLine("I can't exactly sell you a negative amount...");
+          Console.WriteLine("(Please enter a valid positive intiger)");
+          Console.ResetColor();
+          ConfirmBread();
+        }
         else
         {
+          breadQuantity = int.Parse(bread);
+          breadOrder = new Bread(breadQuantity);
           Console.WriteLine("");
           Console.WriteLine("Okie dokie, coming right up!");
           Thread.Sleep(700);
@@ -216,7 +272,6 @@ namespace Bakery
           Thread.Sleep(700);
           Console.WriteLine("...");
           Thread.Sleep(700);
-          breadOrder.Quantity = int.Parse(bread);
           ConfirmPastry();
         }
       }
@@ -227,7 +282,7 @@ namespace Bakery
         Console.WriteLine("And how many croissants?");
         Console.WriteLine("");
         string pastry = Console.ReadLine();
-        if (!int.TryParse(pastry, out int pastryInput) || pastryInput < 0)
+        if (!int.TryParse(pastry, out int pastryInput))
         {
           Console.ForegroundColor = ConsoleColor.Red;
           Console.WriteLine("");
@@ -236,8 +291,28 @@ namespace Bakery
           Console.ResetColor();
           ConfirmPastry();
         }
+        else if (!int.TryParse(pastry, out int pastryInputNumber) || pastryInputNumber > 1000000)
+        {
+          Console.ForegroundColor = ConsoleColor.Red;
+          Console.WriteLine("");
+          Console.WriteLine("Oh man, this is embarassing, I only made one million this morning...");
+          Console.WriteLine("(Please enter a valid positive intiger below 1000001)");
+          Console.ResetColor();
+          ConfirmPastry();
+        }
+        else if (!int.TryParse(pastry, out int pastryInputNum) || pastryInputNum < 0)
+        {
+          Console.ForegroundColor = ConsoleColor.Red;
+          Console.WriteLine("");
+          Console.WriteLine("I can't exactly sell you a negative amount...");
+          Console.WriteLine("(Please enter a valid positive intiger)");
+          Console.ResetColor();
+          ConfirmPastry();
+        }
         else
         {
+          pastryQuantity = int.Parse(pastry);
+          pastryOrder = new Pastry(pastryQuantity);
           Console.WriteLine("");
           Console.WriteLine("You got it!");
           Thread.Sleep(700);
@@ -247,7 +322,6 @@ namespace Bakery
           Thread.Sleep(700);
           Console.WriteLine("...");
           Thread.Sleep(700);
-          pastryOrder.Quantity = int.Parse(pastry);
           ConfirmOrEditOrder();
         }
       }
