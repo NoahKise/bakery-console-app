@@ -4,10 +4,19 @@ namespace Bakery.Models
 {
   public class Bread
   {
-    public static int PriceBread(int inputNumber)
+    public int Quantity { get; set; }
+    public Bread()
     {
-      int freeLoaves = (int)Math.Floor((double)inputNumber / 3);
-      int chargedLoaves = inputNumber - freeLoaves;
+      Quantity = 0;
+    }
+    public Bread(int quantity)
+    {
+      Quantity = quantity;
+    }
+    public int PriceBread()
+    {
+      int freeLoaves = (int)Math.Floor((double)Quantity / 3);
+      int chargedLoaves = Quantity - freeLoaves;
       int breadPrice = chargedLoaves * 5;
       return breadPrice;
     }

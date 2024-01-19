@@ -11,6 +11,8 @@ namespace Bakery
     private static int pastryQuantity;
 
     private static int pastryPrice;
+    private static Bread breadOrder = null;
+    private static Pastry pastryOrder = null;
     static void Main()
     {
       Console.WriteLine("Welcome to the bakery");
@@ -30,7 +32,7 @@ namespace Bakery
         else
         {
           breadQuantity = int.Parse(breadInputString);
-          breadPrice = Bread.PriceBread(breadQuantity);
+          breadOrder = new Bread(breadQuantity);
           GetPastryInput();
         }
       }
@@ -48,17 +50,47 @@ namespace Bakery
         else
         {
           pastryQuantity = int.Parse(pastryInputString);
-          pastryPrice = Pastry.PricePastry(pastryQuantity);
-          CheckOut();
+          pastryOrder = new Pastry(pastryQuantity);
+          ConfirmOrEditOrder();
         }
       }
 
       static void CheckOut()
       {
+        breadPrice = breadOrder.PriceBread();
+        pastryPrice = pastryOrder.PricePastry();
         Order userOrder = new Order(breadPrice, pastryPrice);
-        Console.WriteLine($"You have ordered {breadQuantity} loaves of bread and {pastryQuantity} pastries.");
+        Console.WriteLine($"You have ordered {breadOrder.Quantity} loaves of bread and {pastryOrder.Quantity} pastries.");
         int orderTotal = userOrder.CalculateTotal();
         Console.WriteLine($"Your total is ${orderTotal}");
+      }
+
+      static void ConfirmOrEditOrder()
+      {
+        Order userOrder = new Order(breadPrice, pastryPrice);
+        Console.WriteLine($"You have ordered {breadOrder.Quantity} loaves of bread and {pastryOrder.Quantity} pastries.");
+        Console.WriteLine("Would you like to adjust your order? (y/n)");
+        string confirmResponse = Console.ReadLine().ToLower();
+        if (confirmResponse == "y")
+        {
+          Console.WriteLine("Let's fix your order then!");
+          Console.WriteLine("Enter bread amount:");
+          string bread = Console.ReadLine();
+          Console.WriteLine("Enter pastry amount:");
+          string pastry = Console.ReadLine();
+          breadOrder.Quantity = int.Parse(bread);
+          pastryOrder.Quantity = int.Parse(pastry);
+          ConfirmOrEditOrder();
+        }
+        else if (confirmResponse == "n")
+        {
+          CheckOut();
+        }
+        else
+        {
+          Console.WriteLine("Please only enter 'y' or 'n'.");
+          ConfirmOrEditOrder();
+        }
       }
     }
   }

@@ -9,31 +9,35 @@ namespace Bakery.Tests
     [TestMethod]
      public void PricePastry_ReturnsAnInt_Int()
     {
-      int pastryPrice = Pastry.PricePastry(1);
+      Pastry newPastry = new Pastry(1); 
+      int pastryPrice = newPastry.PricePastry();
       Assert.IsInstanceOfType(pastryPrice, typeof(int));
     }
 
     [TestMethod]
     public void PricePastry_Returns4IfInput2_Int()
     {
+      Pastry newPastry = new Pastry(2); 
       int expectedPrice = 4;
-      int actualPrice = Pastry.PricePastry(2);
+      int actualPrice = newPastry.PricePastry();
       Assert.AreEqual(expectedPrice, actualPrice);
     }
 
     [TestMethod]
     public void PricePastry_Returns6IfInput4_Int()
     {
+      Pastry newPastry = new Pastry(4); 
       int expectedPrice = 6;
-      int actualPrice = Pastry.PricePastry(4);
+      int actualPrice = newPastry.PricePastry();
       Assert.AreEqual(expectedPrice, actualPrice);
     }
 
     [TestMethod]
     public void PriceBread_Returns12IfInput7_Int()
     {
+      Pastry newPastry = new Pastry(7); 
       int expectedPrice = 12;
-      int actualPrice = Pastry.PricePastry(7);
+      int actualPrice = newPastry.PricePastry();
       Assert.AreEqual(expectedPrice, actualPrice);
     }
 
