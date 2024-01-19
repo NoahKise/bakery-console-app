@@ -4,7 +4,8 @@ namespace Bakery.Models
   {
     public static int PricePastry(int inputNumber)
     {
-      return 2;
+      int pastryPrice = inputNumber * 2;
+      return pastryPrice;
     }
   }
 }
