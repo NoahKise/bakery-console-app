@@ -5,10 +5,6 @@ namespace Bakery.Models
   public class Pastry
   {
     public int Quantity { get; set;}
-    public Pastry()
-    {
-      Quantity = 0;
-    }
     public Pastry(int quantity)
     {
       Quantity = quantity;

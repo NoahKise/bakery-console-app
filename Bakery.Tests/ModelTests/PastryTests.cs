@@ -65,14 +65,5 @@ namespace Bakery.Tests
       newPastry.Quantity = newQuantity;
       Assert.AreEqual(newQuantity, newPastry.Quantity);
     }
-
-    // // Example Collection Test
-    // [TestMethod]
-    // public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
-    // {
-    //   // any necessary logic to prep for test; instantiating new classes, etc.
-    //   // we can also use the arrange, act, assert organization in any test. 
-    //   CollectionAssert.AreEqual(ExpectedResult, CodeToTest);
-    // }
   }
 }
