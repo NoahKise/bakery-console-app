@@ -21,6 +21,14 @@ namespace Bakery.Tests
       Assert.AreEqual(expectedPrice, actualPrice);
     }
 
+    [TestMethod]
+    public void PriceBread_Returns6IfInput4_Int()
+    {
+      int expectedPrice = 6;
+      int actualPrice = Bread.PriceBread(4);
+      Assert.AreEqual(expectedPrice, actualPrice);
+    }
+
     // // Example Collection Test
     // [TestMethod]
     // public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
