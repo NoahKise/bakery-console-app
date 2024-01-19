@@ -13,6 +13,14 @@ namespace Bakery.Tests
       Assert.IsInstanceOfType(pastryPrice, typeof(int));
     }
 
+    [TestMethod]
+    public void PricePastry_Returns4IfInput2_Int()
+    {
+      int expectedPrice = 4;
+      int actualPrice = Pastry.PricePastry(2);
+      Assert.AreEqual(expectedPrice, actualPrice);
+    }
+
     // // Example Collection Test
     // [TestMethod]
     // public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
