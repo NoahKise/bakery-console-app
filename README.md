@@ -18,7 +18,7 @@ This is a console application that lets the user simulate shopping at a bakery. 
 * .NET must be installed. Latest version can be found [here](https://dotnet.microsoft.com/en-us/).
 * To run locally on your computer, clone the main branch of this [repository](https://github.com/NoahKise/bakery-console-app/tree/main).
 * In your terminal, navigate to the root folder of this project and run `dotnet restore`.
-* Navigate to "Bakery" directory and run `dotnet run`.
+* Navigate to the "Bakery" directory and run `dotnet run`.
 
 ## License
 
