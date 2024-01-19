@@ -22,10 +22,10 @@ namespace Bakery.Tests
     }
 
     [TestMethod]
-    public void PriceBread_Returns6IfInput4_Int()
+    public void PricePastry_Returns6IfInput4_Int()
     {
       int expectedPrice = 6;
-      int actualPrice = Bread.PriceBread(4);
+      int actualPrice = Pastry.PricePastry(4);
       Assert.AreEqual(expectedPrice, actualPrice);
     }
 
