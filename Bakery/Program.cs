@@ -44,6 +44,9 @@ namespace Bakery
       Console.WriteLine("  |                          |");
       Console.WriteLine("  |  *Croissant: $2 OR 4/$6  |");
       Console.WriteLine("  |                          |");
+      Console.WriteLine("  | * Secret discounts for * |");
+      Console.WriteLine("  |  * Secret quantities! *  |");
+      Console.WriteLine("  |                          |");
       Console.WriteLine("  |--------------------------|");
       GetBreadInput();
 
@@ -306,10 +309,28 @@ namespace Bakery
         int orderTotal = userOrder.CalculateTotal();
         Console.WriteLine("");
         Console.ForegroundColor = ConsoleColor.Green;
-        Console.WriteLine($"${orderTotal}.00 !");
-        Console.ResetColor();
-        Console.WriteLine("");
-        NewOrderOrLeave();
+        if (orderTotal == 1504 || orderTotal == 860)
+        {
+          int salePrice = orderTotal / 2;
+          Console.ForegroundColor = ConsoleColor.Magenta;
+          Console.WriteLine($"***        You've found the secret quantities!        ***");
+          Console.ForegroundColor = ConsoleColor.DarkBlue;
+          Console.WriteLine($"***       Normally your order would cost ${orderTotal}.00      ***");
+          Console.ForegroundColor = ConsoleColor.Magenta;
+          Console.WriteLine($"***             But today it is half off!             ***");
+          Console.ForegroundColor = ConsoleColor.Green;
+          Console.WriteLine($"***                Sale Price: ${salePrice}.00                ***");
+          Console.ResetColor();
+          Console.WriteLine("");
+          NewOrderOrLeave();
+        }
+        else
+        {
+          Console.WriteLine($"${orderTotal}.00 !");
+          Console.ResetColor();
+          Console.WriteLine("");
+          NewOrderOrLeave();
+        }
       }
 
       static void ConfirmBread()
