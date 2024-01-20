@@ -72,7 +72,7 @@ namespace Bakery
                 Console.WriteLine("     ║    │││  O  ║");
                 Console.WriteLine("     ║    OOO     ║");
                 Console.WriteLine("");
-                Console.WriteLine("     Loading...");
+                Console.WriteLine("    Loading...");
                 Console.WriteLine("");
                 break;
               };
@@ -90,7 +90,7 @@ namespace Bakery
                 Console.WriteLine("     ║    ││││    ║");
                 Console.WriteLine("     ║    OOOO    ║");
                 Console.WriteLine("");
-                Console.WriteLine("     Loading...");
+                Console.WriteLine("    Loading...");
                 Console.WriteLine("");
                 break;
               };
@@ -108,7 +108,7 @@ namespace Bakery
                 Console.WriteLine("     ║  O  │││    ║");
                 Console.WriteLine("     ║     OOO    ║");
                 Console.WriteLine("");
-                Console.WriteLine("         Loading...");
+                Console.WriteLine("          Loading...");
                 Console.WriteLine("");
                 break;
               };
@@ -126,7 +126,7 @@ namespace Bakery
                 Console.WriteLine("     ║    ││││    ║");
                 Console.WriteLine("     ║    OOOO    ║");
                 Console.WriteLine("");
-                Console.WriteLine("         Loading...");
+                Console.WriteLine("          Loading...");
                 Console.WriteLine("");
                 break;
               };
