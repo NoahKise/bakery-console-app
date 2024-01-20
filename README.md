@@ -1,4 +1,4 @@
-# Bakery
+# Bit Bakery
 
 #### By Noah Kise
 
