@@ -19,6 +19,7 @@ This is a console application that lets the user simulate shopping at a bakery. 
 * To run locally on your computer, clone the main branch of this [repository](https://github.com/NoahKise/bakery-console-app/tree/main).
 * In your terminal, navigate to the root folder of this project and run `dotnet restore`.
 * Navigate to the "Bakery" directory and run `dotnet run`.
+* It is recommended to open in a terminal that is fairly large so banners can display properly. Using VSCode terminal is NOT recommended.
 
 ## Known Bugs
 
