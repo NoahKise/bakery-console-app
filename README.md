@@ -11,7 +11,7 @@
 
 ## Description
 
-This is a console application that lets the user simulate shopping at a bakery.  They can enter in quantities for loaves of bread and pastries, and then see the total price of their order.  The user can also edit their order, and error handling is incorporated to force user inputs to be valid positive integers.  There is an easter egg if the user enters the correct quantities to calculate one of 2 secret target prices.
+This is a console application that lets the user simulate shopping at a bakery.  They can enter quantities for loaves of bread and pastries, and then see the total price of their order.  The user can also edit their order, and error handling is incorporated to force user inputs to be valid positive integers.  There is an easter egg if the user enters the correct quantities to calculate one of two secret target prices.
 
 ## Setup/Installation Requirements
 
